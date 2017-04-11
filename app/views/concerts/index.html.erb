@@ -3,12 +3,12 @@
 
     <%- @concerts.each do |concert| -%>
       <section class="row concert">
+          <div class="col-sm-8">
+            <h2><%= link_to(concert.artiste, concert_path(concert)) %></h2>
+            <p><%= concert.salle %></p>
+          </div>
           <div class="col-sm-4">
             <%= cl_image_tag(concert.photo.path, width: 300, height: 200, crop: :fill, class: "picture") %>
-          </div>
-          <div class="col-sm-8">
-            <h2><%= concert.artiste %></h2>
-            <p><%= concert.salle %></p>
           </div>
       </section>
     <% end %>
