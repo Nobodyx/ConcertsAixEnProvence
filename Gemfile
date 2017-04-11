@@ -32,6 +32,21 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+#--------------------GEM pour Site Concerts-------------
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+gem 'simple_form'
+gem 'cloudinary'
+gem 'attachinary', github: 'assembler/attachinary'
+gem 'dotenv-rails'
+
+group :development do
+  gem 'binding_of_caller'
+  gem 'better_errors'
+  gem 'pry-byebug'
+  gem 'pry-rails'
+end
+#-------------------------------------------------------
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
