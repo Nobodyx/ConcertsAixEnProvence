@@ -1,0 +1,15 @@
+<div class="concerts">
+  <h1><%= @artiste.pseudo %></h1>
+
+  <%= render partial: "concerts/button_new" %>
+
+  <section class="row concert">
+    <div class="col-sm-4">
+      <%= cl_image_tag(@artiste.photo.path, width: 500, height: 250, crop: :fill, class: "picture") %>
+    </div>
+    <div class="col-sm-8">
+      <p>Age: <%= @artiste.age %></p>
+      <p>Description: <%= @artiste.description %></p>
+    </div>
+  </section>
+</div>

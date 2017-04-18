@@ -1,5 +1,6 @@
 class Concert < ApplicationRecord
-    validates :artiste, presence: true
+    belongs_to :artiste
+    
     validates :salle, presence: true
     validates :date, presence: true
     

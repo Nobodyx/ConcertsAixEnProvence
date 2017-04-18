@@ -1,2 +1,2 @@
 $(document).ready ->
-  $('.attachinary-input').attachinary()
+$('.attachinary-input').attachinary()

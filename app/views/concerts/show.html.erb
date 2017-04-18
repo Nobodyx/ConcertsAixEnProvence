@@ -1,13 +1,14 @@
 <div class="concerts">
-  <h1><%= @concert.artiste %></h1>
+  <h1><%= @concert.artiste.pseudo %></h1>
 
-  <%= render partial: "restaurants/button_list" %>
+  <%= render partial: "concerts/button_list" %>
 
   <section class="row concert">
-    <div class="col-sm-4">
-      <%= cl_image_tag(@concert.photo.path, width: 300, height: 200, crop: :fill, class: "picture") %>
+    <div class="col-sm-12">
+      <%= cl_image_tag(@concert.photo.path, width: 800, height: 600, crop: :fill, class: "picture") %>
     </div>
     <div class="col-sm-8">
+      <p>Artiste: <%= link_to(@concert.artiste.pseudo, artiste_path(@concert.artiste)) %></p>     
       <p>Salle: <%= @concert.salle %></p>     
       <p>Date: <%= @concert.date %></p>
       <p>Description: <%= @concert.description %></p>

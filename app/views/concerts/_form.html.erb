@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <%= simple_form_for(concert) do |f| %>
+      <%= f.input :salle %>
+      <%= f.input :style %>
+      <%= f.input :date %>
+      <%= f.input :description %>
+      <%= f.input :photo, as: :attachinary, accept: "image" %>
+      <%= f.button :submit, value: t(".submit") %>
+    <% end %>
+  </div>
+</div>
